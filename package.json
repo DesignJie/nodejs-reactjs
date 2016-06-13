@@ -1,0 +1,54 @@
+{
+  "name": "nodejs-reactjs",
+  "version": "0.0.1",
+  "description": "nodejs-reactjs",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "^2.4.2",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "redux": "^3.5.2",
+    "serve-favicon": "~2.3.0",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-runtime": "^6.9.2",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DesignJie/nodejs-reactjs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "reactjs"
+  ],
+  "author": "linjie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DesignJie/nodejs-reactjs/issues"
+  },
+  "homepage": "https://github.com/DesignJie/nodejs-reactjs#readme"
+}
