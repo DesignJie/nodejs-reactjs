@@ -20,8 +20,12 @@ module.exports = function(app){
 		res.render('index/index')
 	});
 
+	app.get('/name/detail', function(req, res, next){
+		res.render('index/index')
+	});
+
 	app.get('/hello', function(req, res, next){
 		res.render('index/index')
 	});
-	
+
 }
