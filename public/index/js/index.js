@@ -103,7 +103,7 @@ class NoMatch extends React.Component {
       <div>
           404
           <div>
-            <Link to="/hello">hello</Link>
+            <Link to="/">hello</Link>
           </div>
       </div>)
   }

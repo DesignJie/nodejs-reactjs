@@ -1,0 +1,7 @@
+{
+    "mongodb" : {
+        "host" : "localhost",
+        "hostDB" : "mongodb://localhost/nodejs-reactjs",
+        "port" : 27017
+    }
+}
