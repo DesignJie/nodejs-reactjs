@@ -1,6 +1,3 @@
-var express = require('express');
-var router = express.Router();
-
 module.exports = function(app){
 	/* GET home page. */
 
@@ -13,8 +10,9 @@ module.exports = function(app){
 		}
 	});
 
-	app.use('/api', function(req, res, next){
-		res.send('1212');
-	});
 
+	/* Get index api */
+
+	app.use('/api/api', require('../api/api'));
 }
+

@@ -74,9 +74,9 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
 
-	    console.log(0);
 	    _this.state = {
-	      name: 'react app'
+	      name: 'react app',
+	      data: {}
 	    };
 	    return _this;
 	  }
@@ -84,7 +84,23 @@
 	  _createClass(App, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+	      console.log('did');
+	      console.log(this.state);
+	    }
+	  }, {
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
 	      console.log('mount');
+	      var _self = this;
+
+	      fetch('/api/api', { method: 'POST' }).then(function (res) {
+	        return res.json();
+	      }).then(function (data) {
+	        _self.setState({ data: data });
+	        console.log('fecth end');
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
 	    }
 	  }, {
 	    key: 'componentWillUnmount',
@@ -94,6 +110,7 @@
 	  }, {
 	    key: 'data',
 	    value: function data() {
+
 	      return {
 	        name: 'reactjs data'
 	      };
@@ -101,11 +118,16 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log(1);
+	      console.log('reader');
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        name,
+	        this.state.name,
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          this.state.data.data
+	        ),
 	        _react2.default.createElement(
 	          'ul',
 	          null,

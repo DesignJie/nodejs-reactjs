@@ -7,27 +7,47 @@ import '../css/common.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log(0);
+
     this.state = {
-      name : 'react app'
+      name : 'react app',
+      data : {}
     }
   }
   componentDidMount () {
+    console.log('did');
+    console.log(this.state);
+  }
+  componentWillMount(){
     console.log('mount');
+    var _self = this;
+
+    fetch('/api/api',{ method : 'POST'})
+    .then((res) => {
+      return res.json()
+    })
+    .then((data) => {
+      _self.setState({data : data});
+      console.log('fecth end');
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   }
   componentWillUnmount () {
     console.log('un mount');
   }
   data(){
+
     return {
       name : 'reactjs data'
     }
   }
   render() {
-    console.log(1);
+    console.log('reader')
     return (
       <div>
-      {name}
+      {this.state.name}
+      <p>{this.state.data.data}</p>
         <ul>
          <li><Link to="/hello">hello</Link></li>
          <li><Link to="/name">name</Link></li>
